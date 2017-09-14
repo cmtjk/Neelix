@@ -1,0 +1,108 @@
+<html>
+<head>
+ <style type="text/css">
+/* <![CDATA[ */
+@import "./css/readyset.css";
+@import "./css/inst.css";
+/*  ]]> */
+ </style>
+ <meta charset="utf-8" />
+ <title>Release Notes</title>
+</head>
+
+<body>
+ <h2>Release Notes</h2>
+
+<div class="app">
+<div class="readyset">
+
+ <div id="releaseinfo">
+ <h3>Product Release Information</h3>
+ <table border="1" cellpadding="3" cellspacing="2" class="axial">
+  <tr>
+   <th>Product:</th>
+   <td>Neelix (working title)</td>
+  </tr>
+  <tr>
+   <th>Release Number:</th>
+   <td>
+     2.0.0
+   </td>
+  </tr>
+  <tr>
+   <th>Release Date:</th>
+   <td>
+     29-08-2016
+   </td>
+  </tr>
+ </table>
+ </div> <!-- /releaseinfo -->
+
+
+ <div id="introduction">
+ <h3>Introduction</h3>
+
+ <p>Soo...vielleicht klappts dieses Semester mit unserem Server. Eigentlich müsste ich mich ja nur drum kümmern. Jetzt gibts erstmal Version 2 mit MySQL-, als auch weiterhin SQLite-Support. Für euch ändert sich nichts außer, dass ihr mir Bescheid geben dürft, wenn irgendwas nichtmehr klappt. Weitere Infos gibts im Wiki, sobald der Server läuft und eingerichtet ist.</p>
+
+ </div> <!-- /introduction -->
+
+
+ <div id="whatsnew">
+ <h3>What's New?</h3>
+<dl>
+  <!--<dt>General</dt>-->
+  <ul>
+    <li>added MySQL implementation</li>
+    <li>added optional SSL support</li>
+    <li>added multithreading for expensive tasks</li>
+    <li>added statusbar with progress indicator</li>
+    <li>changed output directory for HTML and CSV file to user home</li>
+    <li>removed line chart values</li>
+    <li>optimized line database implementation</li>
+    <li>optimized line chart implementation</li>
+    <li>...and various fixes</li>
+  </ul>
+
+</dl>
+ </div> <!-- /whatsnew -->
+
+ <div id="recentchanges">
+ <h3>Error Codes</h3>
+<dl>
+<p>
+  <table>
+   <tr class="a"><th>Code</th><th>Cause</th><th>Class</th><th>Description</th><th>Solution</th></tr>
+
+   <tr class="a"><td>101</td><td>NPE/IA</td><td>all</td><td>Fehlerhafte Daten</td><td>Die wohl unangenehmsten Fehler für einen Programmierer, da sie auf schlampige Arbeit hindeuten und eine Lösung dafür gibt es auch nicht. Aber man kann seinen Frust in einem Ticket kundtun.</td></tr>
+   <tr class="a"><td>201</td><td>SQLE/CE</td><td>n/a</td><td>Datenbankfehler</td><td>Kann im Grunde viele Ursachen haben und die Schuld lässt sich im Zweifelsfall auch auf andere schieben. Dafür genügt meist aber auch ein Neustart des Programms, damit alles wieder klappt. Außer die Datenbank ist kaputt. Dann hilft auch hier nichts mehr.</td></tr>
+   <tr class="a"><td>301</td><td>PE</td><td>n/a</td><td>Fehler beim Parsen</td><td>Jetzt wirds richtig spannend. Eine erste Andeutung, dass uns bald die ganze Datebank um die Ohren fliegt. Zum Glück gibts Backups.</td></tr>
+   <tr class="a"><td>401</td><td>IOE</td><td>n/a</td><td>Dateifehler</td><td>Die Liste der Funktionen die jetzt noch funktionieren sollte kürzer sein, als die der nicht funktionierenden. Hier kann man nicht viel machen, außer den StackTrace in der Fehlermeldung zu betrachten.</td></tr>
+   <tr class="a"><td>501</td><td>FNFE</td><td>n/a</td><td>Datei nicht gefunden</td><td>Der Jackpot! Wenn dieser Fehler auftritt kann man nicht nur das Programm ganz normal weiterbenutzen, sondern auch für seine folgendes Handlungen nicht zur Rechenschaft gezogen werden, denn diese Fehlermeldung ist ein letzte Gruß des Loggers, welcher sich gerade ins Nirvana verabschiedet hat.</td></tr>
+   <tr class="a"><td>601</td><td>NPE</td><td>n/a</td><td>Ungültiger Zustand</td><td>Kann nicht passieren...glaub' ich.</td></tr>
+  </table>
+</p>
+
+ </dl>
+
+ </div> <!-- /recentchanges -->
+
+
+ <div id="knownproblems">
+ <h3>Known Problems and Workarounds</h3>
+
+ <p>
+   <dt>Warum laden manchmal Tabs nicht?</dt>
+   Weil das das Netzwerk wieder "rumspackt"(Annette). Es wird dennoch weiter versucht, die Datenbank zu kontaktieren und eigentlich ist es so programmiert, dass es nach einiger Zeit mit einer pompösen Fehlermeldung kundtut, dass irgendwas nicht stimmt. Im Zweifelsfall hilft ein Programmneustart.
+ </p>
+ <p>
+   <dt>Warum dauert es so lange bis eine Anfrage gespeichert wurde oder die Bestätigung erscheint?</dt>
+   Gleicher Grund wie oben, aber vielleicht liegts auch daran, dass jetzt für jede Anfrage die Verbindung neu erstellt wird. Das wird sich in einer zukünftigen Version auch wieder ändern, sobald das Netzwerk wieder stabil ist.
+ </p>
+
+
+ </div> <!-- /knownproblems -->
+
+</div>
+</div>
+</body>
+</html>

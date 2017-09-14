@@ -1,0 +1,237 @@
+@font-face {
+    src: url('DroidSans.ttf');
+}
+
+@font-face {
+    src: url('DroidSans-Bold.ttf');
+}
+
+/*---------------------------------------------------------------
+ROOT
+---------------------------------------------------------------*/
+.root {
+    -fx-font-size: 11pt;
+}
+
+.vbox {
+    -fx-padding: 15;
+    -fx-spacing: 10;
+}
+
+.hbox {
+    -fx-spacing: 10;
+}
+
+.center {
+    -fx-alignment: center;
+}
+
+.text {
+    -fx-font-family: 'Droid Sans';
+}
+
+.text-bold {
+    -fx-font-weight: bold;
+}
+
+.white-text {
+    -fx-text-fill: white;
+}
+
+.grey-background {
+    -fx-background-color: grey;
+}
+
+.lightgrey-background {
+    -fx-background-color: lightgrey;
+}
+
+.gold-background {
+    -fx-background-color: gold;
+}
+
+/*---------------------------------------------------------------
+Tab
+---------------------------------------------------------------*/
+.tab-pane {
+    -fx-tab-min-width: 78;
+    -fx-background-insets: 0;
+}
+
+.tab {
+    -fx-background-radius: 0;
+    -fx-background-color: lightblue;
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+.tab:focused {
+    -fx-border-radius: 0;
+    -fx-focus-color: transparent;
+}
+
+.tab:selected {
+    -fx-background-color: dodgerblue;
+}
+
+.tab:selected .tab-label {
+    -fx-text-fill: white;
+}
+
+.releasetab {
+    -fx-background-color: gold;
+    -fx-font-weight: bold;
+}
+
+.releasetab:selected {
+    -fx-background-color: dodgerblue;
+}
+
+
+
+/*---------------------------------------------------------------
+---Operating System Toggle Button
+---------------------------------------------------------------*/
+.toggle-button.left-pill {
+    -fx-background-radius: 3 0 0 3, 3 0 0 3, 2 0 0 2, 1 0 0 1;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 2;
+    -fx-padding: 0.333333em 0.666667em 0.333333em 0.75em; /* 4 8 4 9 */
+}
+
+.toggle-button.center-pill {
+    -fx-background-radius: 0;
+    -fx-background-insets: 0 0 -1 0, 0 0 0 0, 1 1 1 0, 2 2 2 1;
+}
+
+.toggle-button.right-pill {
+    -fx-background-radius: 0 3 3 0, 0 3 3 0, 0 2 2 0, 0 1 1 0;
+    -fx-background-insets: 0 0 -1 0, 0, 1 1 1 0, 2 2 2 1;
+}
+
+.toggle-button.left-pill:focused {
+    -fx-background-insets: -0.2 0 -0.2 -0.2, 1, 2, -1.4 0 -1.4 -1.4, 2.6;
+    -fx-background-radius: 3 0 0 3, 2 0 0 2, 1 0 0 1, 4 0 0 4, 1 0 0 1;
+}
+
+.toggle-button.center-pill:focused {
+    -fx-background-insets: -0.2 0 -0.2 -1, 1 1 1 0, 2 2 2 1, -1.4 0 -1.4 -1,
+    2.6 2.6 2.6 1.6;
+    -fx-background-radius: 0, 0, 0, 0, 0;
+}
+
+.toggle-button.right-pill:focused {
+    -fx-background-insets: -0.2 -0.2 -0.2 -1, 1 1 1 0, 2 2 2 1, -1.4 -1.4 -1.4 -1, 2.6 2.6 2.6 1.6;
+    -fx-background-radius: 0 3 3 0, 0 2 2 0, 0 1 1 0, 0 4 4 0, 0 1 1 0;
+}
+
+.toggle-button:selected.left-pill:focused {
+    -fx-background-insets: -0.2 0 -0.2 -0.2, 1, -1.4 0 -1.4 -1.4, 2.6;
+    -fx-background-radius: 3 0 0 3, 2 0 0 2, 4 0 0 4, 0;
+}
+
+.toggle-button:selected.center-pill:focused {
+    -fx-background-insets: -0.2 0 -0.2 -1, 1 1 1 0, -1.4 0 -1.4 -1, 2.6 2.6 2.6 1.6;
+    -fx-background-radius: 0, 0, 0, 0;
+}
+
+.toggle-button:selected.right-pill:focused {
+    -fx-background-insets: -0.2 -0.2 -0.2 -1, 1 1 1 0, -1.4 -1.4 -1.4 -1,
+    2.6 2.6 2.6 1.6;
+    -fx-background-radius: 0 3 3 0, 0 2 2 0, 0 4 4 0, 0;
+}
+
+/*---------------------------------------------------------------
+---Footer
+---------------------------------------------------------------*/
+.button.footer {
+    -fx-min-width: 100;
+    -fx-font-size: 9pt;
+}
+
+.button.neutral {
+    -fx-background-color: lightgreen;
+}
+
+.button.warning {
+    -fx-background-color: orange;
+    -fx-min-width: 100;
+}
+
+.toggle-button.footer {
+    -fx-min-width: 50;
+    -fx-font-size: 9pt;
+    
+}
+
+.toggle-button.neutral {
+    -fx-background-color: lightgreen;
+}
+
+.toggle-button.warning {
+    -fx-background-color: orange;
+    -fx-min-width: 50;
+}
+
+/*---------------------------------------------------------------
+Debug Tab
+---------------------------------------------------------------*/
+.list-cell.debug {
+    -fx-font-size: 9pt;
+    -fx-background-color: black;
+}
+
+.list-cell.info {
+    -fx-text-fill: green;
+}
+
+.list-cell.warning {
+    -fx-text-fill: black;
+    -fx-background-color: yellow;
+}
+
+.list-cell.error {
+    -fx-text-fill: white;
+    -fx-background-color: red;
+}
+
+.list-cell.report {
+    -fx-text-fill: white;
+    -fx-background-color: purple;
+}
+
+.list-cell.fatal {
+    -fx-text-fill: white;
+    -fx-background-color: #babdb6;
+}
+
+.list-cell.trace {
+    -fx-text-fill: lightblue;
+}
+
+/*---------------------------------------------------------------
+Qunatity View
+---------------------------------------------------------------*/
+.text-field.quantity {
+    -fx-max-width: 50;
+}
+
+/*---------------------------------------------------------------
+Statistic Tab
+---------------------------------------------------------------*/
+.chart {
+    -fx-background-color: lightgrey;
+    -fx-effect: dropshadow(one-pass-box, black, 8, 0.0, 2, 0);
+}
+
+.table-view {
+    -fx-font-size: 9pt;
+}
+
+/*---------------------------------------------------------------
+Status Bar
+---------------------------------------------------------------*/
+.statusbar .progress-bar .bar {
+    -fx-background-insets: 0, 1, 2;
+    -fx-padding: 0.416667em;
+    -fx-accent: dodgerblue;
+}

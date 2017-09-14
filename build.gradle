@@ -1,0 +1,41 @@
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.1'
+}
+
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'eclipse'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile 'log4j:log4j:1.2.17'
+    compile 'mysql:mysql-connector-java:5.1.39'
+    testCompile 'junit:junit:4.12'
+}
+
+mainClassName = 'de.r3r57.neelix.main.Main'
+
+jar {
+    manifest {
+        attributes 'Main-Class': "$mainClassName"
+    }
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+task zip(type: Zip) {
+    baseName = 'Neelix-latest'
+    from('.') {
+        include 'Neelix.exe'
+        include 'neelix.marker'
+        include 'update.bat'
+        include 'cacerts/'
+        include 'config/'
+        include 'doc/'
+        include 'log/'
+    }
+}
