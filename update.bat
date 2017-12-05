@@ -35,7 +35,7 @@ set SCRIPT="%RANDOM%-%RANDOM%-%RANDOM%-%RANDOM%.bat"
 	echo @echo off
 	echo echo.
 	echo echo Aktuelle Version wird heruntergeladen...
-	echo xcopy /f \\daten.uni-bamberg.de\team.it-support\52_NeelixSQL\Neelix-latest.zip %NEELIX_HOME%
+	echo xcopy /f \\daten.uni-bamberg.de\team.it-support\52_Neelix\Neelix-latest.zip %NEELIX_HOME%
 	echo if %%errorlevel%% neq 0 goto abort
 	echo echo Entpacken...
 	echo "C:\Program Files\7-Zip\7z.exe" x -y  %NEELIX_HOME%\Neelix-latest.zip
