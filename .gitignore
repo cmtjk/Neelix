@@ -102,6 +102,7 @@ local.properties
 .syntastic_javac_config
 html/
 logs/
+log/
 requests/
 backup/
 commit.message
