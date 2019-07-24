@@ -1,10 +1,13 @@
-task wrapper(type: Wrapper) {
-    gradleVersion = '4.1'
+plugins {
+    id 'java'
+    id 'eclipse'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.7'
 }
 
-apply plugin: 'java'
-apply plugin: 'application'
-apply plugin: 'eclipse'
+wrapper {
+    gradleVersion = '5.5.1'
+}
 
 repositories {
     jcenter()
@@ -14,6 +17,11 @@ dependencies {
     compile 'log4j:log4j:1.2.17'
     compile 'mysql:mysql-connector-java:5.1.39'
     testCompile 'junit:junit:4.12'
+}
+
+javafx {
+    version = '12.0.1'
+    modules = [ 'javafx.controls', 'javafx.web' ]
 }
 
 mainClassName = 'de.r3r57.neelix.main.Main'
