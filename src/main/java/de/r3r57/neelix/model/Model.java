@@ -24,7 +24,7 @@ import de.r3r57.neelix.model.resources.exception.SystemException;
 
 public class Model {
 
-    private final String VERSION = "2.2.1";
+    private final String VERSION = "2.2.1-openjdk";
 
     private Properties props;
 

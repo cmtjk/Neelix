@@ -2,29 +2,29 @@
 <launch4jConfig>
   <dontWrapJar>false</dontWrapJar>
   <headerType>gui</headerType>
-  <jar>/home/cornelius/Documents/projects/Neelix/Neelix.jar</jar>
-  <outfile>/home/cornelius/Documents/projects/Neelix/Neelix.exe</outfile>
-  <errTitle></errTitle>
+  <jar>/home/cornelius/Documents/Projekte/Neelix/Neelix.jar</jar>
+  <outfile>/home/cornelius/Documents/Projekte/Neelix/Neelix.exe</outfile>
+  <errTitle>Neelix uses Java version found through JAVA_HOME. Is JAVA_HOME set?</errTitle>
   <cmdLine></cmdLine>
   <chdir>.</chdir>
   <priority>normal</priority>
-  <downloadUrl>http://java.com/download</downloadUrl>
+  <downloadUrl>https://adoptium.net/?variant=openjdk11&amp;jvmVariant=hotspot</downloadUrl>
   <supportUrl></supportUrl>
   <stayAlive>false</stayAlive>
   <restartOnCrash>false</restartOnCrash>
   <manifest></manifest>
-  <icon>/home/cornelius/Documents/projects/Neelix/misc/NeelixIcon.ico</icon>
+  <icon>/home/cornelius/Documents/Projekte/Neelix/misc/NeelixIcon.ico</icon>
   <jre>
-    <path></path>
+    <path>%JAVA_HOME%</path>
     <bundledJre64Bit>false</bundledJre64Bit>
     <bundledJreAsFallback>false</bundledJreAsFallback>
-    <minVersion>1.8.0</minVersion>
+    <minVersion></minVersion>
     <maxVersion></maxVersion>
     <jdkPreference>preferJre</jdkPreference>
     <runtimeBits>64/32</runtimeBits>
   </jre>
   <splash>
-    <file>/home/cornelius/Documents/projects/Neelix/misc/NeelixSplash.bmp</file>
+    <file>/home/cornelius/Documents/Projekte/Neelix/misc/NeelixSplash.bmp</file>
     <waitForWindow>true</waitForWindow>
     <timeout>60</timeout>
     <timeoutErr>true</timeoutErr>

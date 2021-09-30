@@ -1,37 +1,45 @@
 plugins {
     id 'java'
-    id 'eclipse'
     id 'application'
-    id 'org.openjfx.javafxplugin' version '0.0.7'
+    id 'eclipse'
+    id 'org.openjfx.javafxplugin' version '0.0.10'
 }
 
-wrapper {
-    gradleVersion = '5.5.1'
+javafx {
+    version = "11.0.2"
+    modules = [ 'javafx.controls', 'javafx.web' ]
 }
+
+compileJava.options.encoding = "UTF-8"
+compileTestJava.options.encoding = "UTF-8"
 
 repositories {
     jcenter()
 }
 
 dependencies {
-    compile 'log4j:log4j:1.2.17'
-    compile 'mysql:mysql-connector-java:5.1.39'
-    testCompile 'junit:junit:4.12'
+    implementation 'log4j:log4j:1.2.17'
+    implementation 'mysql:mysql-connector-java:5.1.39'
+    testImplementation 'junit:junit:4.12'
+	
+    runtimeOnly "org.openjfx:javafx-controls:$javafx.version:win"
+    runtimeOnly "org.openjfx:javafx-controls:$javafx.version:linux"
+    runtimeOnly "org.openjfx:javafx-web:$javafx.version:win"
+    runtimeOnly "org.openjfx:javafx-web:$javafx.version:linux"
 }
 
-javafx {
-    version = '12.0.1'
-    modules = [ 'javafx.controls', 'javafx.web' ]
-}
-
-mainClassName = 'de.r3r57.neelix.main.Main'
+mainClassName = 'de.r3r57.neelix.main.WorkaroundMain'
 
 jar {
+
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
     manifest {
         attributes 'Main-Class': "$mainClassName"
     }
     from {
-        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+        exclude '**/module-info.class'
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
     }
 }
 
