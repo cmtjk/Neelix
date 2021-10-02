@@ -5,6 +5,8 @@ plugins {
     id 'org.openjfx.javafxplugin' version '0.0.10'
 }
 
+version "2.2.1-openjdk"
+
 javafx {
     version = "11.0.2"
     modules = [ 'javafx.controls', 'javafx.web' ]
@@ -18,8 +20,9 @@ repositories {
 }
 
 dependencies {
-    implementation 'log4j:log4j:1.2.17'
-    implementation 'mysql:mysql-connector-java:5.1.39'
+    implementation 'org.apache.logging.log4j:log4j-core:2.14.1'
+    implementation 'mysql:mysql-connector-java:8.0.26'
+
     testImplementation 'junit:junit:4.12'
 	
     runtimeOnly "org.openjfx:javafx-controls:$javafx.version:win"
@@ -28,7 +31,7 @@ dependencies {
     runtimeOnly "org.openjfx:javafx-web:$javafx.version:linux"
 }
 
-mainClassName = 'de.r3r57.neelix.main.WorkaroundMain'
+mainClassName = 'de.cmtjk.neelix.main.WorkaroundMain'
 
 jar {
 
@@ -44,7 +47,7 @@ jar {
 }
 
 task zip(type: Zip) {
-    baseName = 'Neelix-latest'
+    baseName = name + '-' + version
     from('.') {
         include 'Neelix.exe'
         include 'neelix.marker'

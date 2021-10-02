@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <Console name="stdout" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d %p (%t) - %m%n"/>
+        </Console>
+        <RollingFile name="logfile" fileName="./log/neelix.log" filePattern=".%d{yyyy-MM-dd}" ignoreExceptions="false">
+            <PatternLayout>
+                <Pattern>%d %p - %m%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1"/>
+            </Policies>
+            <DefaultRolloverStrategy max="5" />
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+    <Logger name="rootLogger"/>
+        <Root level="trace">
+            <AppenderRef ref="stdout"/>
+            <AppenderRef ref="logfile"/>
+        </Root>
+    </Loggers>
+</Configuration>
