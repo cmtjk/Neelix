@@ -24,7 +24,7 @@ import java.util.Properties;
 
 public class Model {
 
-    private final String VERSION = "2.2.1-openjdk";
+    private final String VERSION = "2.2.2-openjdk";
     private final Path configFilePath = Paths.get("./config/neelix.config").toAbsolutePath();
     private final Path userhome = Paths.get(System.getProperty("user.home")).toAbsolutePath();
     private final Path logFilePath = Paths.get("./log/neelix.log").toAbsolutePath();
